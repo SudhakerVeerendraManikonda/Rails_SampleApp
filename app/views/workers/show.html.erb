@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<h5> Worker Details</h5>
+<br/>
+<p>
+  <strong>Employee ID:</strong>
+  <%= @worker.id %>
+</p>
+<p>
+  <strong>First name:</strong>
+  <%= @worker.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @worker.last_name %>
+</p>
+
+<br/>
+
+<h5> Worker Order Assigned to the Worker </h5>
+
+<%= render 'workorders/list_work_orders' %> 
+
+<br/>
+
+<%= link_to 'Edit', edit_worker_path(@worker) %> |
+<%= link_to 'Back', workers_path %>

@@ -1,0 +1,7 @@
+<div class="filter_options_container">  
+  <form class="filter_form">
+  Filter By Status 
+    <%= select_tag 'status_id', options_for_select(Status.all.map { |status| [status.status_description , status.id] },:selected=> @selected_status)  %>
+    <input type="submit" value="Filter" />
+  </form>
+</div>
